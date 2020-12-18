@@ -251,6 +251,15 @@ minetest.register_craft({
 	},
 })
 
+minetest.register_craft({
+	output = "basic_materials:steel_bar 6",
+	recipe = {
+		{"", "", "moreores:silver_ingot"},
+		{"", "moreores:silver_ingot", ""},
+		{"moreores:silver_ingot", "", ""},
+	},
+})
+
 --decorative ores
 
 minetest.register_node("more_metal_stuff:deco_uranium_ore", {
@@ -275,6 +284,8 @@ local recipes = {
 	{"technic:lead_lump", "default:stone", "technic:mineral_lead"},	
 	{"technic:sulfur_lump", "default:stone", "technic:mineral_sulfur"},
 	{"technic:zinc_lump", "default:stone", "technic:mineral_zinc"},
+	{"moreores:silver_lump", "default:stone", "moreores:mineral_silver"},
+	{"moreores:mithril_lump", "default:stone", "moreores:mineral_mithril"},
 	{"technic:uranium0_ingot", "default:stone", "more_metal_stuff:deco_uranium_ore"},
 	{"technic:uranium0_ingot", "default:meselamp", "more_metal_stuff:uranium_mese_lamp"},
 	{"technic:zinc_ingot", "default:meselamp", "more_metal_stuff:zinc_mese_lamp"},
@@ -443,6 +454,15 @@ minetest.register_craft({
 		{"technic:lead_ingot", "", "technic:lead_ingot"},
 		{"technic:lead_ingot", "technic:lead_ingot", "technic:lead_ingot"},
 		{"technic:lead_ingot", "", "technic:lead_ingot"},
+	}
+})
+
+minetest.register_craft({
+	output = "default:ladder_steel 15",
+	recipe = {
+		{"moreores:silver_ingot", "", "moreores:silver_ingot"},
+		{"moreores:silver_ingot", "moreores:silver_ingot", "moreores:silver_ingot"},
+		{"moreores:silver_ingot", "", "moreores:silver_ingot"},
 	}
 })
 
